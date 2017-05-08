@@ -1,8 +1,8 @@
-#DcmtkQtLink
+# DcmtkQtLink
 DcmtkQtLink is a console based application developed using Qt and C++. It demonstrates how to link a third party libraries in Qt projects. 
 It uses DCMTK library which is a widely used library to work with DICOM images (http://dicom.offis.de/index.php.en).
 
-#Required Tools
+# Required Tools
 Following tools are required to build this project
 
 1. Qt Creator (version used - 3.6.0) Website: https://www.qt.io/developers/
