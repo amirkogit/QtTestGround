@@ -1,0 +1,3 @@
+# Introduction
+This repo contains the collection of various QtQuick projects to learn about QML, Javascript, integration of QML/C++ etc...
+
