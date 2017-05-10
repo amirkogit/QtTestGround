@@ -8,7 +8,8 @@ Project {
     //mainFile: "qtquickui.qml"
     //mainFile: "RectangleDemo.qml"
     //mainFile: "RectPropertyBindings.qml"
-    mainFile: "ObjectAttributes.qml"
+    //mainFile: "ObjectAttributes.qml"
+    mainFile: "CustomButtonTestApp.qml"
 
     /* Include .qml, .js, and image files from current directory and subdirectories */
     QmlFiles {
