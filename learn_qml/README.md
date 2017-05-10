@@ -8,6 +8,9 @@ These are not meant for application development as they do not contain C++ code,
 ## QtQuickApps
 This folder contains various Qt Quick 2 application project that contains both QML and C++ code.
 
+## TextEditor
+This folder contains complete application that is available with Qt 5.7 distribution and I made minor changes to .pro file and main.cpp file in order build the application successfully.
+
 ## images
 "images" folder contains all demo images that can be used by all QML applications in this repo.
 

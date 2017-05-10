@@ -43,4 +43,5 @@ Temporary Items
 .apdisk
 
 qbs_demo/build*
+learn_qml/build*
 learn_qml/QtQuickApps/build*
