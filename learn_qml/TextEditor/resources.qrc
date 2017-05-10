@@ -21,6 +21,7 @@
         <file>qml/images/textunder.png</file>
         <file>qml/images/zoomin.png</file>
         <file>qml/images/zoomout.png</file>
+		<file>example.html</file>
         <file>qml/images/qt-logo.png</file>
     </qresource>
 </RCC>
