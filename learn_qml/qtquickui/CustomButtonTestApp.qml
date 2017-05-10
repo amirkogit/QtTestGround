@@ -17,9 +17,19 @@ Column {
         color: "green"
     }
 
+    // Notice that only orange button has signal handlers from CustomButton
     CustomButton {
         width: 50
         height:50
         color: "orange"
+
+        // write signal handlers available in CustomButton
+        onActivated: {
+            console.log("(With double clicks) Activated at " + xPos + "," + yPos)
+        }
+
+        onDeactivated: {
+            console.log("Deactivated!")
+        }
     }
 }
