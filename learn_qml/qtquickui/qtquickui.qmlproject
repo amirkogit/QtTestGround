@@ -7,7 +7,8 @@ import QmlProject 1.1
 Project {
     //mainFile: "qtquickui.qml"
     //mainFile: "RectangleDemo.qml"
-    mainFile: "RectPropertyBindings.qml"
+    //mainFile: "RectPropertyBindings.qml"
+    mainFile: "ObjectAttributes.qml"
 
     /* Include .qml, .js, and image files from current directory and subdirectories */
     QmlFiles {
