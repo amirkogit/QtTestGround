@@ -22,7 +22,7 @@ ListView {
     // object properties
     // *********************************************************************
     width: 300
-    height: 300
+    height: 500
     spacing: 10
     //enabled: false // disable all controls in this page
 
@@ -69,10 +69,14 @@ ListView {
                 onClicked: currentIndex = index
                 onCheckedChanged: print('RadioButton OnCheckedChanged',index,checked)
             }
-
         }
 
-        // add radio buttons
+        // add switch
+        MySwitch {
+            checked: true
+            width: 0.98* root.width; height: 0.2 * root.width
+            onCheckedChanged: print('Switch onCheckedChanged',checked)
+        }
     }
 
     // *********************************************************************
