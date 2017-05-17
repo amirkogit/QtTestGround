@@ -52,6 +52,27 @@ ListView {
 
             onCheckedChanged: console.log("OnCheckedChanged for a check box.")
         }
+
+        // add radio buttons
+        ListView {
+            width: 0.98 * root.width
+            height: 0.2 * root.width * count
+
+            model: [{text: 'Radio Button 1'},{text: 'Radio Button 2'}]
+
+            delegate: MyRadioButton {
+                text: modelData.text
+                width: 0.98 * root.width
+                height: 0.2 * root.width
+
+                checked: currentIndex == index
+                onClicked: currentIndex = index
+                onCheckedChanged: print('RadioButton OnCheckedChanged',index,checked)
+            }
+
+        }
+
+        // add radio buttons
     }
 
     // *********************************************************************

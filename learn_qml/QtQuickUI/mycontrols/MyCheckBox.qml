@@ -36,7 +36,7 @@ Item {
     // *********************************************************************
     width: 250
     height: 50
-    opacity: enabled ? 1 : 0.3
+    opacity: enabled? 1 : 0.3
 
     // *********************************************************************
     // child objects
@@ -49,21 +49,22 @@ Item {
         x: padding * root.height
         anchors.verticalCenter: parent.verticalCenter
         border.width: 0.05 * root.height
-        radius: (radius ? 0.5 : 0.2) * height
+        radius: (radio? 0.5 : 0.2) * height
         color: root.box_color
 
-        Text {
+        Text { // check
             visible: checked && !radio
             anchors.centerIn: parent
             text: '\u2713' // http://www.fileformat.info/info/unicode/char/2713/index.htm
             font.pixelSize: parent.height
         }
 
-        Rectangle {
+        Rectangle { // radio dot
             visible: checked && radio
             color: 'black'
             width: 0.5 * parent.width
             height: width
+            anchors.centerIn: parent
             radius: 0.5 * width
         }
     }
