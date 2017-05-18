@@ -1,0 +1,7 @@
+About this project
+
+- Demonstrates how to expose the attributes of C++ types to QML
+- Consists of Message and MessageBody class
+- Message class exposes some of its members as PROPERTY so that it can be invoked from QML document
+- Message class also holds MessageBody and exposes it as PROPERTY
+- Before these classes can be used in QML, it must be properly set as context property which is done in main.cpp
