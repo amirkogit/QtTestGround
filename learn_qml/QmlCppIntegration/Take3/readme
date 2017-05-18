@@ -1,0 +1,17 @@
+About this project
+
+- Demonstrates how to use Grouped properties
+- Consists of MessageAuthor and Message class
+- Grouped property syntax can be used as follows:
+    Message {
+        author.name: "Alexandra"
+        author.email: "alexandra@mail.com"
+    }
+
+As per Qt documentation,
+A type that is exposed as a grouped property differs from an object-type property in that the grouped property is
+read-only, and is initialized to a valid value by the parent object at construction. The grouped property's
+sub-properties may be modified from QML but the grouped property object itself will never change, whereas an
+object-type property may be assigned a new object value from QML at any time. Thus, the lifetime of a grouped property
+object is controlled strictly by the C++ parent implementation, whereas an object-type property can be freely created and
+destroyed through QML code.
