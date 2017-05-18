@@ -1,0 +1,23 @@
+About this project
+
+- Demonstrates how to expose properties with Object type
+- Consists of Message and MessageBody class
+- Message class exposes some of its members as PROPERTY so that it can be invoked from QML document
+- Message class also holds MessageBody and exposes it as PROPERTY
+- Message and MessageBody classes are same as in Take 1
+
+- Before these classes can be used in QML, it must be properly set as context property which is done in main.cpp
+    Here qmlRegisterType is used. Instead of instantiating object of Message class, whole Message is passed as an argument as follows:
+
+    qmlRegisterType<Message>("org.qml_cpp_integration.example",1,0,"Message");
+    qmlRegisterType<MessageBody>("org.qml_cpp_integration.example",1,0,"MessageBody");
+
+    This will make it possible to write the following in QML document:
+
+    Message {
+        id: msg
+        author: "New author name set." // invokes Message::setAuthor()
+        body: MessageBody {
+            description: "MessageBody description set" // invokes Message::setBody()
+        }
+    }
