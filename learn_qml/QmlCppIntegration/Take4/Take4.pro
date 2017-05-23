@@ -5,7 +5,8 @@ CONFIG += c++11
 
 SOURCES += main.cpp \
     instantiable.cpp \
-    noninstantiable.cpp
+    noninstantiable.cpp \
+    uncreatabletype.cpp
 
 RESOURCES += qml.qrc
 
@@ -17,7 +18,8 @@ include(deployment.pri)
 
 HEADERS += \
     instantiable.h \
-    noninstantiable.h
+    noninstantiable.h \
+    uncreatabletype.h
 
 DISTFILES += \
     readme

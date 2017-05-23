@@ -25,6 +25,11 @@ Window {
 
 //    }
 
+    // following will give an error message: "Cannot create a class of type UncreatableType"
+//    UncreatableType {
+
+//    }
+
     Column {
         Text {
             text: "Take 4 (Registering C++ types with QML type system)"
@@ -37,6 +42,9 @@ Window {
         }
         Text {
             text: "Date: " + instantiable.creationDate
+        }
+        Text {
+            text: "From UncreatableType -> Value of Tuesday: " + UncreatableType.TUESDAY
         }
     }
 }
