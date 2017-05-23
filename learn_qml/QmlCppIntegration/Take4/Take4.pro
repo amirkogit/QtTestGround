@@ -4,7 +4,8 @@ QT += qml quick
 CONFIG += c++11
 
 SOURCES += main.cpp \
-    instantiable.cpp
+    instantiable.cpp \
+    noninstantiable.cpp
 
 RESOURCES += qml.qrc
 
@@ -15,7 +16,8 @@ QML_IMPORT_PATH =
 include(deployment.pri)
 
 HEADERS += \
-    instantiable.h
+    instantiable.h \
+    noninstantiable.h
 
 DISTFILES += \
     readme

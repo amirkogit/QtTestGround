@@ -20,6 +20,11 @@ Window {
         creationDate: new Date()
     }
 
+    // following doesn't work
+//    NonInstantiable {
+
+//    }
+
     Column {
         Text {
             text: "Take 4 (Registering C++ types with QML type system)"
