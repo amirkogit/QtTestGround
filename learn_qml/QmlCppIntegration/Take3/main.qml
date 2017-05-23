@@ -11,12 +11,19 @@ Window {
     MouseArea {
         anchors.fill: parent
         onClicked: {
-            Qt.quit();
+            var result = msg_board.postMessage("Hello from QML") // invokes postMessage (Q_INVOKABLE) on C++ side
+            console.log("Result of postMessage(): ", result)
+            msg_board.refresh()
         }
     }
 
     Message {
         id: msg
+    }
+
+    MessageBoard {
+        id: msg_board
+        onNewMessagePosted: console.log("New message received:",subject) // invoked when 'newMessagePosted' signal is emitted from C++
     }
 
     Column {
@@ -25,11 +32,13 @@ Window {
         }
 
         Text {
-            text: 'name: ' + msg.author.name
+            text: 'name: ' + msg.author.name    // invokes name() of MessageAuthor on C++
+                                                // Note here that we do not need to explicitly define MessageAuthor because
+                                                // this is embedded in Message class (in C++) and exposed to QML as grouped property
         }
 
         Text {
-            text: 'email: ' + msg.author.email
+            text: 'email: ' + msg.author.email // invokes email() of MessageAuthor on C++
         }
     }
 }

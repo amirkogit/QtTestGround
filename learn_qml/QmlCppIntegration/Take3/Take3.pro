@@ -15,7 +15,8 @@ QML_IMPORT_PATH =
 include(deployment.pri)
 
 HEADERS += \
-    message.h
+    message.h \
+    messageboard.h
 
 DISTFILES += \
     readme

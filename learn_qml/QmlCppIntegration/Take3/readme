@@ -1,7 +1,11 @@
 About this project
 
-- Demonstrates how to use Grouped properties
-- Consists of MessageAuthor and Message class
+- Demonstrates how to use Grouped properties and exposing methods(using Q_INVOKABLE and public slots)
+- Also demonstrates on exposing signals from C++ and how these signals are handled in QML side
+
+- Consists of followng classes:
+    MessageAuthor, Message and MessageBoard
+
 - Grouped property syntax can be used as follows:
     Message {
         author.name: "Alexandra"
@@ -15,3 +19,18 @@ sub-properties may be modified from QML but the grouped property object itself w
 object-type property may be assigned a new object value from QML at any time. Thus, the lifetime of a grouped property
 object is controlled strictly by the C++ parent implementation, whereas an object-type property can be freely created and
 destroyed through QML code.
+
+Output:
+When the application is run, following texts are displayed in the window:
+Take 3
+name: Default name from C++
+email: Default email from C++
+
+When clicked anywhere in the window, we get following in the application output(console):
+Called C++ method with  "Hello from QML"
+qml: New message received: Hello from QML
+qml: Result of postMessage():  true
+Called the C++ slot[refresh()]
+
+Reference:
+http://doc.qt.io/qt-5/qtqml-cppintegration-exposecppattributes.html
