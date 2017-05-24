@@ -19,7 +19,9 @@ include(deployment.pri)
 HEADERS += \
     instantiable.h \
     noninstantiable.h \
-    uncreatabletype.h
+    uncreatabletype.h \
+    singletontypeqjsvalue.h \
+    singletontypeexample.h
 
 DISTFILES += \
     readme
