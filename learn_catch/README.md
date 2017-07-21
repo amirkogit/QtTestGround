@@ -1,6 +1,7 @@
 The project structure looks as shown below:
 
-── app
+.
+|── app
 │   ├── app.pro
 │   └── main.cpp
 ├── defaults.pri
