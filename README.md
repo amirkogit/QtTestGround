@@ -9,3 +9,6 @@ Contains collection of various QML code snippets
 
 # 3. qbs_demo
 Contains code snippets created for trying out various Qbs features.
+
+# 4. learn_catch
+Contains projects to test various features of C++ unit testing framework Catch (C++ Automated Test Cases in Headers)
