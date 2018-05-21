@@ -13,7 +13,7 @@ public:
     Worker();
     ~Worker();
 
-public:
+public slots:
     void Initialize();
     void Start();
     void Stop();
