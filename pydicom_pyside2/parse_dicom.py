@@ -58,7 +58,7 @@ class Window(QtWidgets.QDialog):
         self.updateComboBox(self.directoryComboBox)
 
         self.currentDir = QtCore.QDir(path)
-        fileName = "*"
+        fileName = "*.dcm"
         files = self.currentDir.entryList([fileName],
                 QtCore.QDir.Files | QtCore.QDir.NoSymLinks)
 
