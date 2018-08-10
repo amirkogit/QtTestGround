@@ -5,6 +5,7 @@
 
 QT_BEGIN_NAMESPACE
 class QTextBrowser;
+class FileListModel;
 QT_END_NAMESPACE
 
 class Window : public QWidget
@@ -24,6 +25,7 @@ private slots:
 
 private:
     QTextBrowser *m_logViewer;
+    FileListModel* m_fileListModel;
 };
 
 #endif // WINDOW_H

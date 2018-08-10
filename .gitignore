@@ -46,3 +46,5 @@ qbs_demo/build*
 learn_qml/build*
 learn_qml/QtQuickApps/build*
 learn_qml/QmlCppIntegration/build*
+pyside2_examples/.idea/misc.xml
+pyside2_examples/.idea/workspace.xml

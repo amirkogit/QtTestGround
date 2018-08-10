@@ -12,6 +12,8 @@ Window::Window(QWidget *parent)
 void Window::updateFileCount(int number)
 {
     m_logViewer->append(tr("%1 items added.").arg(number));
+    auto filelist = m_fileListModel->getFileList();
+    m_logViewer->append(filelist.join(", "));
 }
 
 void Window::updateOnClickHandler(const QModelIndex& index)
@@ -27,15 +29,15 @@ void Window::clearLogViewer()
 
 void Window::setupUI()
 {
-    FileListModel *model = new FileListModel(this);
-    model->setDirPath("C:\\temp\\dcmtestdata");
+    m_fileListModel = new FileListModel(this);
+    m_fileListModel->setDirPath("C:\\temp\\dcmtestdata");
 
     QLabel *label = new QLabel(tr("&Directory:"));
     QLineEdit *lineEdit = new QLineEdit;
     label->setBuddy(lineEdit);
 
     QListView *view = new QListView;
-    view->setModel(model);
+    view->setModel(m_fileListModel);
 
     m_logViewer = new QTextBrowser;
     m_logViewer->setSizePolicy(QSizePolicy(QSizePolicy::Preferred, QSizePolicy::Preferred));
@@ -44,10 +46,10 @@ void Window::setupUI()
 
     // connect all signals and slots
     connect(lineEdit, &QLineEdit::textChanged,
-            model, &FileListModel::setDirPath);
+            m_fileListModel, &FileListModel::setDirPath);
     connect(lineEdit, &QLineEdit::textChanged,
             m_logViewer, &QTextEdit::clear);
-    connect(model, &FileListModel::numberPopulated,
+    connect(m_fileListModel, &FileListModel::numberPopulated,
             this, &Window::updateFileCount);
     connect(view, &QListView::clicked,
             this, &Window::updateOnClickHandler);
