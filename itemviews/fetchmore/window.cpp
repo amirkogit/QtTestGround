@@ -3,31 +3,31 @@
 
 #include <QtWidgets>
 
-Window::Window(QWidget *parent)
+ApplicationWindow::ApplicationWindow(QWidget *parent)
     : QWidget(parent)
 {
     setupUI();
 }
 
-void Window::updateFileCount(int number)
+void ApplicationWindow::updateFileCount(int number)
 {
     m_logViewer->append(tr("%1 items added.").arg(number));
     auto filelist = m_fileListModel->getFileList();
     m_logViewer->append(filelist.join(", "));
 }
 
-void Window::updateOnClickHandler(const QModelIndex& index)
+void ApplicationWindow::updateOnClickHandler(const QModelIndex& index)
 {
     m_logViewer->append(tr("%1 row %2 column clicked.").arg(index.row()).arg(index.column()));
     m_logViewer->append(tr("Value of clicked item: %1").arg(index.data().toString()));
 }
 
-void Window::clearLogViewer()
+void ApplicationWindow::clearLogViewer()
 {
     m_logViewer->clear();
 }
 
-void Window::setupUI()
+void ApplicationWindow::setupUI()
 {
     m_fileListModel = new FileListModel(this);
     m_fileListModel->setDirPath("C:\\temp\\dcmtestdata");
@@ -50,11 +50,11 @@ void Window::setupUI()
     connect(lineEdit, &QLineEdit::textChanged,
             m_logViewer, &QTextEdit::clear);
     connect(m_fileListModel, &FileListModel::numberPopulated,
-            this, &Window::updateFileCount);
+            this, &ApplicationWindow::updateFileCount);
     connect(view, &QListView::clicked,
-            this, &Window::updateOnClickHandler);
+            this, &ApplicationWindow::updateOnClickHandler);
     connect(clearButton, &QPushButton::clicked,
-            this, &Window::clearLogViewer);
+            this, &ApplicationWindow::clearLogViewer);
 
     // add all widgets to layout
     QGridLayout *layout = new QGridLayout;
