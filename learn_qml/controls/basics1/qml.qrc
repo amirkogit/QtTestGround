@@ -22,7 +22,6 @@
         <file>SwitchCustomize.qml</file>
         <file>SwitchDelegateCustomize.qml</file>
         <file>CustomizeSlider.qml</file>
-        <file>assets/close.png</file>
         <file>RepeaterTest1.qml</file>
         <file>Dummy.qml</file>
         <file>CustomizeSlider_copy.qml</file>
