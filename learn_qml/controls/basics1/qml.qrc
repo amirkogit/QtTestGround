@@ -1,0 +1,30 @@
+<RCC>
+    <qresource prefix="/">
+        <file>main.qml</file>
+        <file>MyButton.qml</file>
+        <file>MyText.qml</file>
+        <file>RectangleEx.qml</file>
+        <file>assets/triangle_red.png</file>
+        <file>SwipeTest.qml</file>
+        <file>RectangleEx2.qml</file>
+        <file>Square.qml</file>
+        <file>GreenSquare.qml</file>
+        <file>BrightSquare.qml</file>
+        <file>RowTest.qml</file>
+        <file>DarkSquare.qml</file>
+        <file>RedSquare.qml</file>
+        <file>BlueSquare.qml</file>
+        <file>RepeaterTest.qml</file>
+        <file>AnchorsDemo.qml</file>
+        <file>KeysTest.qml</file>
+        <file>TabButton.qml</file>
+        <file>MySwitch.qml</file>
+        <file>SwitchCustomize.qml</file>
+        <file>SwitchDelegateCustomize.qml</file>
+        <file>CustomizeSlider.qml</file>
+        <file>assets/close.png</file>
+        <file>RepeaterTest1.qml</file>
+        <file>Dummy.qml</file>
+        <file>CustomizeSlider_copy.qml</file>
+    </qresource>
+</RCC>
