@@ -8,11 +8,24 @@ Window {
     height: 900
     title: qsTr("Qml Playground")
 
+//    TestMouseArea {
+//        x: 20; y: 20
+//        width: 200; height: 200
+//    }
+
+//    TestCombo {
+//        x: 10; y: 20
+//    }
+
+    TestCombo {
+        x: 160; y: 50
+    }
+
     // ========================================================================================
 
-    //    Dummy {
+//        Dummy {
 
-    //    }
+//        }
 
     // ========================================================================================
 
@@ -29,15 +42,15 @@ Window {
     // ========================================================================================
 
     // Test customized slider
-    DarkSquare {
-        x: 20; y: 20
-        width: 800; height: 300
-        CustomizeSlider {
-            anchors.centerIn: parent
-            width: 300
-            //sliderWidth: 400
-        }
-    }
+//    DarkSquare {
+//        x: 20; y: 20
+//        width: 800; height: 300
+//        CustomizeSlider {
+//            anchors.centerIn: parent
+//            width: 300
+//            //sliderWidth: 400
+//        }
+//    }
 
     // ========================================================================================
 

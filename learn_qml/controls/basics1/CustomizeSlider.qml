@@ -5,6 +5,7 @@ Item{
     //property  alias width: 200 // make width accessible to outside
     //property alias width: control.availableWidth
     property real sliderWidth: 400
+    property alias mycurrentValue : control.value
 
     // low range
     Label {
@@ -31,10 +32,12 @@ Item{
 
     Slider {
         id: control
-        value: 0.25 * control.to
+        value: mycurrentValue//0.25 * control.to
         from: 30
         to: 350
         stepSize:5
+        snapMode:Slider.SnapOnRelease
+        live:false
 
         background: Rectangle {
             x: control.leftPadding
@@ -46,6 +49,7 @@ Item{
             radius: 2
             //color: "#bdbebf"
             color: "grey"//"#b40337" // red
+            border.color: "blue"
 
 //            Rectangle {
 //                width: control.visualPosition * parent.width
@@ -86,7 +90,7 @@ Item{
             //color: control.pressed ? "#f0f0f0" : "#f6f6f6"
             //color: control.pressed ? "#f0f0f0" : "#f6f6f6"
             color: "#f0f0f0"
-            border.color: "#bdbebf"
+            border.color: "red"//"#bdbebf"
 
             // show current value on the top of slider knob
             Text {
@@ -98,14 +102,30 @@ Item{
             }
         }
 
-        onMoved: {
-            currentValue.text = control.valueAt(control.visualPosition)
+//        onMoved: {
+//            currentValue.text = control.valueAt(control.visualPosition)
 
-            // simulate the increment of flow rate
-            //progressBar.width = progressBar.width + 0.2
-            progressBar.width = 0;
-            timer.start()
-            console.log("Restarted timer ...");
+//            // simulate the increment of flow rate
+//            //progressBar.width = progressBar.width + 0.2
+//            progressBar.width = 0;
+//            //timer.start()
+//            //console.log("Restarted timer ...");
+//        }
+
+//        MouseArea {
+//            anchors.fill: parent
+//            onPressed: {
+//                console.log("+++++++ mouse area...");
+//                mouse.accepted = false // don't obscure the request to move the slider
+//            }
+//        }
+
+        onPressedChanged: {
+            console.log(">>> on pressed...");
+        }
+
+        onValueChanged: {
+            console.log(">>> onvalue changed ... value = ", control.value.toFixed(0))
         }
     }
 

@@ -25,5 +25,7 @@
         <file>RepeaterTest1.qml</file>
         <file>Dummy.qml</file>
         <file>CustomizeSlider_copy.qml</file>
+        <file>TestCombo.qml</file>
+        <file>TestMouseArea.qml</file>
     </qresource>
 </RCC>
