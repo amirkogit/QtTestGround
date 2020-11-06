@@ -1,0 +1,12 @@
+#ifndef RFIDMODULE_GLOBAL_H
+#define RFIDMODULE_GLOBAL_H
+
+#include <QtCore/qglobal.h>
+
+#if defined(RFIDMODULE_LIBRARY)
+#  define RFIDMODULESHARED_EXPORT Q_DECL_EXPORT
+#else
+#  define RFIDMODULESHARED_EXPORT Q_DECL_IMPORT
+#endif
+
+#endif // RFIDMODULE_GLOBAL_H
